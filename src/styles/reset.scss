@@ -1,0 +1,18 @@
+ul,
+a {
+  margin: auto;
+  padding: 16px 16px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: 0;
+  list-style: none;
+  left: 0;
+  text-transform: uppercase;
+}
+a:hover {
+  color: #000 !important;
+  background-color: #ccc !important;
+  cursor: pointer;
+}

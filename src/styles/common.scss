@@ -1,0 +1,45 @@
+html {
+  font-size: 15px;
+  height: 100%;
+  line-height: 1.8;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 100px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Forms
+   ========================================================================== */
+button,
+input {
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 1.15;
+  text-align: right;
+  color: #262626;
+  margin: 0;
+}

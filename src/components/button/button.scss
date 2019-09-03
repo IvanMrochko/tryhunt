@@ -1,0 +1,55 @@
+@import "core.scss";
+
+@mixin theme(
+  $background,
+  $color,
+  $hoverBackground: $background,
+  $hoverColor: $color
+) {
+  color: $color;
+  background: $background;
+
+  &:hover:not(:disabled) {
+    color: $hoverColor;
+    background: $hoverBackground;
+  }
+}
+
+.button {
+  height: 4rem;
+  padding: 0 2.4rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  width: auto;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: $transition;
+  &--primary {
+    @include theme($primary, #fff, darken($primary, 15%));
+  }
+  &--secondary {
+    @include theme($secondary, #fff, darken($secondary, 15%));
+  }
+  &--error {
+    @include theme(crimson, #fff, darken(crimson, 15%));
+  }
+  &--transparent {
+    @include theme(transparent, transparent);
+    padding: 0px;
+    height: max-content;
+  }
+  &--cancel {
+    @include theme($cancel, #fff);
+    @include flex(center, center, row);
+  }
+  &--timer {
+    @include theme(#e5e5e5, $black);
+    @include flex(center, center, row);
+  }
+  &--disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}

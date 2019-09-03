@@ -1,0 +1,17 @@
+@import "core.scss";
+
+.mainPage {
+  @include flex(stretch, stretch);
+  background: #f9f9fb;
+}
+.container {
+  width: 100%;
+  @include flex(center, center, column);
+}
+.content {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: inherit;
+}

@@ -1,0 +1,8 @@
+@import "core.scss";
+
+.footer {
+  @include flex(center, center, column);
+  align-self: stretch;
+  padding: 40px 10px;
+  background: #f9f9fb;
+}
