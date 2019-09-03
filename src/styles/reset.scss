@@ -10,9 +10,27 @@ a {
   list-style: none;
   left: 0;
   text-transform: uppercase;
+  background-color: #ffffff7d;
 }
 a:hover {
   color: #000 !important;
   background-color: #ccc !important;
   cursor: pointer;
+}
+path:hover {
+  fill: #6d6d6dd4;
+}
+p {
+  display: block;
+  text-align: center;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 18px;
+}
+h3 {
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 24px;
 }

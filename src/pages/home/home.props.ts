@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 
 /**
- * Footer props
+ * Home props
  */
 type HomeProps = HTMLAttributes<HTMLDivElement> & {
   id: string;

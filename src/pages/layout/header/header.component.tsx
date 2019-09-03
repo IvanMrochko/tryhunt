@@ -18,8 +18,8 @@ const Header = () => {
         {links.map(value => {
           return (
             <Link
-              key={value}
               activeClass="active"
+              key={value}
               to={value}
               spy={true}
               smooth={true}

@@ -4,6 +4,7 @@ import * as ReactDOM from "react-dom";
 import { Pages } from "./pages/pages.component";
 import { createBrowserHistory } from "history";
 import { Provider } from "react-redux";
+
 // import { Store } from "./store";
 
 /**

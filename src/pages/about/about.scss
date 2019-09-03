@@ -1,0 +1,21 @@
+@import "core.scss";
+
+.about {
+  padding: 128px 16px;
+  @include flex(center, center, column);
+  width: 100%;
+  max-height: 667px;
+  min-height: 667px;
+}
+
+.container {
+  @include flex(center, center, column);
+}
+
+.cards {
+  margin-top: 64px;
+  @include flex(center, center);
+}
+.cards > * {
+  padding: 0 8px;
+}
