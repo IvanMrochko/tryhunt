@@ -25,9 +25,10 @@
   color: #fff;
 }
 .icons {
-  position: absolute;
+  position: relative;
   left: 0;
-  bottom: -35px;
+  bottom: 0;
+  top: 100px;
   padding: 24px 48px;
 }
 .icons > * {
