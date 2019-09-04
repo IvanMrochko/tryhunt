@@ -3,7 +3,7 @@ import * as styles from "./about.scss";
 import { AboutProps } from "./about.props";
 import { Link } from "react-scroll";
 import { Card } from "src/components/card";
-
+const phone = require("../../assets/img/phone.jpg");
 /**
  * About component
  */
@@ -31,7 +31,7 @@ const About: React.SFC<AboutProps> = ({ id }) => {
         </div>
       </section>
       <div className={styles.promo}>
-        <div>
+        <div className={styles.promoleft}>
           <h3>We know design.</h3>
           <p>{text}</p>
           <Link
@@ -42,11 +42,14 @@ const About: React.SFC<AboutProps> = ({ id }) => {
             smooth={true}
             offset={-70}
             duration={500}
+            className={styles.button}
           >
             View Our Works
           </Link>
         </div>
-        <div></div>
+        <div>
+          <img src={phone} alt="phone" className={styles.roudImg} />
+        </div>
       </div>
     </>
   );

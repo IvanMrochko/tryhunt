@@ -6,6 +6,7 @@ import * as styles from "./pages.scss";
 import { Layout } from "./layout";
 import { Home } from "./home";
 import { About } from "./about";
+import { Team } from "./team";
 
 /**
  * Root component
@@ -15,7 +16,7 @@ const Pages = () => {
     <Layout>
       <Home id="home" />
       <About id="about" />
-      <Home id="team" />
+      <Team id="team" />
       <Home id="work" />
       <Home id="pricing" />
       <Home id="contact" />

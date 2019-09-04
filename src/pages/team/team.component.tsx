@@ -1,6 +1,6 @@
 import * as React from "react";
-import * as styles from "./home.scss";
-import { HomeProps } from "./home.props";
+import * as styles from "./team.scss";
+import { TeamProps } from "./team.props";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,10 +12,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 /**
- * Home component
+ * Team component
  */
 
-const Home: React.SFC<HomeProps> = ({ id }) => {
+const Team: React.SFC<TeamProps> = ({ id }) => {
   return (
     <section className={styles.home} id={id}>
       <div className={styles.container}>
@@ -48,4 +48,4 @@ const Home: React.SFC<HomeProps> = ({ id }) => {
   );
 };
 
-export { Home };
+export { Team };

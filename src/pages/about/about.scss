@@ -23,4 +23,25 @@
   background-color: #f1f1f1;
   padding: 128px 16px;
   position: relative;
+  @include flex(flex-start, space-around);
+}
+.promo > * {
+  padding: 0 10px 0 10px;
+}
+.promoleft {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.promoleft p {
+  font-size: 15px;
+  text-align: left;
+}
+.button {
+  background-color: $black;
+  color: $white;
+  text-transform: initial;
+}
+.roudImg {
+  border-radius: 10px;
 }
