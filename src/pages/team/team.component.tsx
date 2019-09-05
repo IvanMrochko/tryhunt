@@ -3,46 +3,36 @@ import * as styles from "./team.scss";
 import { TeamProps } from "./team.props";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-  faLinkedinIn,
-  faSnapchat
-} from "@fortawesome/free-brands-svg-icons";
-
+import { TeamMember } from "src/components/teamMember";
+import { text } from "@shared";
 /**
  * Team component
  */
+const teamList = ["John Doe", "Anja Doe", "Mike Ross", "Dan Star"];
+const dataList = ["Partners", "Projects Done", "Happy Clients", "Meetings"];
 
 const Team: React.SFC<TeamProps> = ({ id }) => {
   return (
-    <section className={styles.home} id={id}>
+    <section className={styles.team} id={id}>
       <div className={styles.container}>
-        <span>Start something that matters</span>
-        <span>
-          Stop wasting valuable time with projects that just isn't you.
-        </span>
-        <span>
-          <Link
-            activeClass="active"
-            key="about"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Learn more and start today
-          </Link>
-        </span>
+        <h3>THE TEAM</h3>
+        <p>The ones who runs this company</p>
+        <div className={styles.list}>
+          {teamList.map(value => (
+            <TeamMember title={value} key={value}>
+              {text}
+            </TeamMember>
+          ))}
+        </div>
       </div>
-      <div className={styles.icons}>
-        <FontAwesomeIcon icon={faFacebook} size="lg" />
-        <FontAwesomeIcon icon={faInstagram} size="lg" />
-        <FontAwesomeIcon icon={faTwitter} size="lg" />
-        <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
-        <FontAwesomeIcon icon={faSnapchat} size="lg" />
+      <div className={styles.addInfo}>
+        {dataList.map(value => (
+          <div className={styles.item} key={value}>
+            <span>{Math.floor(Math.random() * 150) + 1}+</span>
+            <br />
+            {value}
+          </div>
+        ))}
       </div>
     </section>
   );

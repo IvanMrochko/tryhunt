@@ -6,11 +6,11 @@
   background-image: url(../../assets/img/mac.jpg);
   background-position: center;
   background-size: cover;
-  min-height: -webkit-fill-available;
+  min-height: 900px;
 }
 .container {
   @include flex(flex-start, flex-start, column);
-  padding: 50px;
+  padding: 0 26px;
 }
 
 .container > * {
@@ -28,7 +28,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 24px 48px;
+  padding: 0 26px;
 }
 .icons > * {
   padding-left: 10px;

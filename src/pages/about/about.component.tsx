@@ -4,12 +4,11 @@ import { AboutProps } from "./about.props";
 import { Link } from "react-scroll";
 import { Card } from "src/components/card";
 const phone = require("../../assets/img/phone.jpg");
+import { text } from "@shared";
 /**
  * About component
  */
 const titles = ["Responsive", "Passion", "Design", "Support"];
-const text =
-  " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedon eiusmod tempor incididunt ut labore et dolore.";
 const About: React.SFC<AboutProps> = ({ id }) => {
   return (
     <>

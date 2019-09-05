@@ -16,18 +16,17 @@
 }
 
 .button {
-  height: 4rem;
-  padding: 0 2.4rem;
-  font-size: 1.6rem;
-  text-transform: uppercase;
+  height: 3rem;
+  font-size: 15px;
   text-align: center;
-  color: #fff;
+  color: $white;
   width: auto;
   border-radius: 4px;
   cursor: pointer;
   transition: $transition;
   &--primary {
-    @include theme($primary, #fff, darken($primary, 15%));
+    @include theme($light-grey2, $black, darken($light-grey, 15%));
+    width: 100%;
   }
   &--secondary {
     @include theme($secondary, #fff, darken($secondary, 15%));

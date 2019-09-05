@@ -7,3 +7,4 @@ export * from "./with-styles";
 export * from "./forms";
 export * from "./dictionary";
 export * from "./get-label-by-id";
+export * from "./consts";

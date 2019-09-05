@@ -1,17 +1,19 @@
 @import "core.scss";
 
 .about {
-  margin: 0;
-  padding: 0;
   @include flex(center, center, column);
+
   width: 100%;
+  margin: 0;
   max-height: 640px;
   min-height: 640px;
 }
 .container {
   @include flex(center, center, column);
 }
-
+.about > * {
+  padding: 0 26px;
+}
 .cards {
   margin-top: 64px;
   @include flex(center, center);
@@ -21,7 +23,7 @@
 }
 .promo {
   background-color: #f1f1f1;
-  padding: 128px 16px;
+  padding: 128px 26px;
   position: relative;
   @include flex(flex-start, space-around);
 }
