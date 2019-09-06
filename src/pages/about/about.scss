@@ -47,3 +47,13 @@
 .roudImg {
   border-radius: 10px;
 }
+.containerDesign {
+  @include flex(flex-start, flex-start);
+  width: 100%;
+  box-sizing: border-box;
+}
+.containerDesign > * {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

@@ -39,3 +39,23 @@
   font-size: 36px;
   text-align: center;
 }
+.skills {
+  @include flex(flex-start, space-around);
+  background-color: $light-grey2;
+  padding: 32px 0 64px 0;
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin: 0;
+}
+.containerSkills {
+  @include flex(flex-start, flex-start);
+  padding: 0px 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.containerSkills > * {
+  margin: 0;
+  padding: 0 8px;
+  width: 100%;
+}

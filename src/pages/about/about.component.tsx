@@ -30,24 +30,26 @@ const About: React.SFC<AboutProps> = ({ id }) => {
         </div>
       </section>
       <div className={styles.promo}>
-        <div className={styles.promoleft}>
-          <h3>We know design.</h3>
-          <p>{text}</p>
-          <Link
-            activeClass="active"
-            key="team"
-            to="team"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className={styles.button}
-          >
-            View Our Works
-          </Link>
-        </div>
-        <div>
-          <img src={phone} alt="phone" className={styles.roudImg} />
+        <div className={styles.containerDesign}>
+          <div className={styles.promoleft}>
+            <h3>We know design.</h3>
+            <p>{text}</p>
+            <Link
+              activeClass="active"
+              key="team"
+              to="team"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className={styles.button}
+            >
+              View Our Works
+            </Link>
+          </div>
+          <div>
+            <img src={phone} alt="phone" className={styles.roudImg} />
+          </div>
         </div>
       </div>
     </>

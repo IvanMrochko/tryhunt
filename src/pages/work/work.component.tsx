@@ -2,9 +2,12 @@ import * as React from "react";
 import * as styles from "./work.scss";
 import { WorkProps } from "./work.props";
 const camera = require("../../assets/img/camera");
+import { text } from "@shared";
+import { ProgresLine } from "src/components/progresLine";
 /**
  * Work component
  */
+const skillsList = ["Photography", "Web Design", "Photoshop"];
 
 const Work: React.SFC<WorkProps> = ({ id }) => {
   let emptyArray = Array(4).fill(0);
@@ -22,6 +25,23 @@ const Work: React.SFC<WorkProps> = ({ id }) => {
             </div>
           );
         })}
+      </div>
+      <div className={styles.skills}>
+        <div className={styles.containerSkills}>
+          <div>
+            <h3>Our Skills.</h3>
+            <p>{text}</p>
+            <p>{text}</p>
+          </div>
+          <div>
+            {skillsList.map(value => (
+              <ProgresLine
+                title={value}
+                value={Math.floor(Math.random() * 100) + 1}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
