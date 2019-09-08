@@ -23,7 +23,7 @@
 }
 .addInfo {
   @include flex(flex-start, space-around);
-  background-color: #616161;
+  background-color: $dark-grey;
   margin: 0;
   width: 100%;
   padding: 64px 26px;

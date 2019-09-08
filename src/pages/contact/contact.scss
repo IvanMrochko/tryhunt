@@ -1,0 +1,26 @@
+@import "core.scss";
+
+.contact {
+  @include flex(center, center, column);
+  width: 100%;
+  margin: 0;
+  background: $light-grey2;
+}
+.container {
+  @include flex(center, center, column);
+  padding: 128px 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.container div:last-child {
+  padding-top: 40px;
+}
+.list {
+  width: 100%;
+  height: auto;
+  padding-top: 40px;
+  font-weight: 300;
+}
+.imges:hover {
+  opacity: 0.6;
+}

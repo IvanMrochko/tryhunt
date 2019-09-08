@@ -4,6 +4,8 @@ import { Home } from "./home";
 import { About } from "./about";
 import { Team } from "./team";
 import { Work } from "./work";
+import { Pricing } from "./pricing";
+import { Contact } from "./contact";
 
 /**
  * Root component
@@ -15,8 +17,8 @@ const Pages = () => {
       <About id="about" />
       <Team id="team" />
       <Work id="work" />
-      <Home id="pricing" />
-      <Home id="contact" />
+      <Pricing id="pricing" />
+      <Contact id="contact" />
     </Layout>
   );
 };

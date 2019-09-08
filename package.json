@@ -45,6 +45,7 @@
     "react-scroll": "^1.7.14",
     "react-select": "^3.0.4",
     "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
     "reflect-metadata": "^0.1.13",
     "sass-loader": "^7.1.0",
     "terser-webpack-plugin": "^1.2.4",

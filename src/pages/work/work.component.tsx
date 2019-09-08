@@ -4,12 +4,24 @@ import { WorkProps } from "./work.props";
 const camera = require("../../assets/img/camera");
 import { text } from "@shared";
 import { ProgresLine } from "src/components/progresLine";
+import Dialog from "@material-ui/core/Dialog";
 /**
  * Work component
  */
 const skillsList = ["Photography", "Web Design", "Photoshop"];
 
 const Work: React.SFC<WorkProps> = ({ id }) => {
+  const [open, setOpen] = React.useState(false);
+  const [imgUrl, setUrl] = React.useState("");
+  const handleClickOpen = e => {
+    setUrl(e.target.src);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   let emptyArray = Array(4).fill(0);
   return (
     <section className={styles.work} id={id}>
@@ -20,7 +32,14 @@ const Work: React.SFC<WorkProps> = ({ id }) => {
           return (
             <div className={styles.list} key={index}>
               {emptyArray.map((value2, index2) => (
-                <img src={camera} alt="photo" key={index + "-" + index2} />
+                <div className={styles.imges} key={index2}>
+                  <img
+                    src={camera}
+                    alt="photo"
+                    key={index + "-" + index2}
+                    onClick={e => handleClickOpen(e)}
+                  />
+                </div>
               ))}
             </div>
           );
@@ -38,11 +57,15 @@ const Work: React.SFC<WorkProps> = ({ id }) => {
               <ProgresLine
                 title={value}
                 value={Math.floor(Math.random() * 100) + 1}
+                key={value}
               />
             ))}
           </div>
         </div>
       </div>
+      <Dialog open={open} onClose={handleClose} fullWidth>
+        <img src={imgUrl} alt="photo" />
+      </Dialog>
     </section>
   );
 };

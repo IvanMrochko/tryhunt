@@ -14,6 +14,7 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 15px;
+  overflow-x: hidden;
 }
 
 /* width */
@@ -31,7 +32,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $primary;
+  background: #555;
   border-radius: 100px;
 }
 
@@ -46,8 +47,16 @@ button,
 input {
   font-family: Helvetica;
   font-size: 16px;
-  line-height: 1.15;
-  text-align: right;
+  line-height: inherit;
+  text-align: left;
   color: #262626;
   margin: 0;
+  padding: 8px;
+  width: -webkit-fill-available;
+}
+form {
+  box-sizing: inherit;
+  width: 100%;
+  display: block;
+  text-align: left;
 }

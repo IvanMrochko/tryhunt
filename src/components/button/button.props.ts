@@ -16,7 +16,8 @@ type ButtonProps = HTMLAttributes<HTMLButtonElement> & {
     | "error"
     | "transparent"
     | "timer"
-    | "cancel";
+    | "cancel"
+    | "black";
   /**
    * Button type
    */

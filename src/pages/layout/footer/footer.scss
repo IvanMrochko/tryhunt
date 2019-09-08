@@ -2,7 +2,13 @@
 
 .footer {
   @include flex(center, center, column);
-  align-self: stretch;
-  padding: 40px 10px;
-  background: #f9f9fb;
+  width: 100%;
+  margin: 0;
+  background: $black;
+  color: $white;
+  padding: 64px 0;
+}
+
+.icons > * {
+  padding: 10px 5px;
 }

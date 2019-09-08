@@ -51,4 +51,9 @@
     opacity: 0.7;
     cursor: not-allowed;
   }
+  &--black {
+    @include theme($black, $white, darken($white, 15%));
+    text-transform: initial;
+    padding: 0px 24px;
+  }
 }

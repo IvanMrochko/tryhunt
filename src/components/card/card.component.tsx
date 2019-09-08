@@ -11,7 +11,7 @@ import { faApple } from "@fortawesome/free-brands-svg-icons";
  */
 const Card: React.SFC<CardProps> = ({ children, title }) => {
   return (
-    <div>
+    <div className={styles.item}>
       <p>
         <FontAwesomeIcon icon={faApple} size="5x" />
       </p>

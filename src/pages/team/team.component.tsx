@@ -1,8 +1,6 @@
 import * as React from "react";
 import * as styles from "./team.scss";
 import { TeamProps } from "./team.props";
-import { Link } from "react-scroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TeamMember } from "src/components/teamMember";
 import { text } from "@shared";
 /**
