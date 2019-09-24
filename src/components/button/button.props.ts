@@ -6,7 +6,7 @@ type ButtonProps = HTMLAttributes<HTMLButtonElement> & {
   /**
    * Children
    */
-  children: ReactNode;
+  children?: ReactNode;
   /**
    * Button theme
    */

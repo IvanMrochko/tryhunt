@@ -1,0 +1,42 @@
+@import 'variables.scss';
+@import 'helpers.scss';
+
+.switch {
+  @include flex($align: center, $justify: space-between);
+}
+
+.track {
+  position: relative;
+  width: 64px;
+  height: 30px;
+  background: $gray;
+  transition: 0.25s;
+  border-radius: 100px;
+  cursor: pointer;
+  &--enabled {
+    background: rgba(0, 134, 84, 0.25);
+  }
+}
+
+.indicator {
+  @include size(24px);
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.25s;
+  &--enabled {
+    background: $primary;
+    left: calc(100% - 3px);
+    transform: translate(-100%, -50%);
+  }
+}
+
+.label {
+  margin-right: 30px;
+  font-size: 14px;
+  color: #6b6b6b;
+  cursor: pointer;
+}

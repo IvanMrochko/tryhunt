@@ -1,0 +1,35 @@
+@import "variables.scss";
+@import "helpers.scss";
+
+.checkbox {
+  @include flex($align: center);
+  &--disabled {
+    opacity: 0.5;
+  }
+}
+
+.flag {
+  @include size(24px);
+  @include flex(center, center);
+  border: 3px solid #d4d4d7;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.25s;
+  &--checked {
+    background: $primary;
+    border: 3px solid rgba($primary, 0.6);
+  }
+}
+
+.label {
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: normal;
+  color: $dark-grey;
+  cursor: pointer;
+
+  a {
+    color: #17a1f5;
+    text-decoration: underline;
+  }
+}

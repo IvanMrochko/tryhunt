@@ -1,0 +1,35 @@
+@import "core.scss";
+
+.home {
+  @include flex(flex-start, center, column);
+  width: 100%;
+  background-image: url(../../assets/img/mac.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 900px;
+}
+.container {
+  @include flex(flex-start, flex-start, column);
+  padding: 26px;
+}
+
+.container > * {
+  padding-top: 5px;
+}
+.container span:nth-of-type(1) {
+  font-size: 64px;
+  color: #fff;
+}
+.container span:nth-of-type(2) {
+  font-size: 18px;
+  color: #fff;
+}
+.icons {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 26px;
+}
+.icons > * {
+  padding-left: 10px;
+}

@@ -5,7 +5,8 @@ import { Pages } from "./pages/pages.component";
 import { createBrowserHistory } from "history";
 import { Provider } from "react-redux";
 import createStore from "./store";
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Components } from "./pages/components";
 /**
  * Router history
  */
@@ -22,7 +23,10 @@ const store = createStore(history);
  */
 ReactDOM.render(
   <Provider store={store}>
-    <Pages />
+    {/* <Router>
+      <Route exact path="/components" component={Components} />
+    </Router> */}
+    {/* <Pages /> */}
   </Provider>,
   document.getElementById("app")
 );

@@ -1,0 +1,84 @@
+@import "variables.scss";
+@import "helpers.scss";
+@import "components.scss";
+
+.text-field {
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #6b6b6b;
+}
+
+.required {
+  margin-left: 3px;
+  font-size: 16px;
+  color: #e16e6e;
+}
+
+.placeholder {
+  font-size: 16px;
+  color: #6b6b6b;
+}
+
+.error {
+  display: none;
+}
+
+.box {
+  @include flex(center, center);
+  width: 100%;
+  height: 47px;
+  border-radius: 4px;
+  &--invalid {
+    border: 1px solid #e16e6e;
+  }
+  @include error;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 16px;
+  background: $white;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.25s;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.helper {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #6b6b6b;
+}
+
+@include rtl() {
+  .input {
+    direction: rtl;
+  }
+  .label {
+    direction: rtl;
+  }
+}
+
+@include rtlFont() {
+  .input,
+  .label {
+    font-family: GESS;
+    font-weight: 700;
+  }
+}

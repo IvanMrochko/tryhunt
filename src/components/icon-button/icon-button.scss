@@ -1,0 +1,28 @@
+@import "helpers.scss";
+@import "components.scss";
+
+.icon-button {
+  @include flex(center, center);
+  @include size(40px);
+  background: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  transition: $transition;
+  cursor: pointer;
+  outline: none;
+  &:not(:first-child) {
+    margin-left: 5px;
+  }
+  &--primary{
+    &:hover:not(:disabled) {
+      @include fill($primary);
+      background: rgba(0, 134, 84, 0.1);
+    }
+  }
+  &--danger {
+    &:hover:not(:disabled) {
+      @include fill(#E16E6E);
+      background: rgba(#E16E6E, 0.1);
+    }
+  }
+}

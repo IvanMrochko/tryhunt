@@ -1,0 +1,47 @@
+export interface IAutocompleteScss {
+  'error': string;
+  'select': string;
+  'select--invalid': string;
+  'selectInvalid': string;
+  'label': string;
+  'arrow': string;
+  'controls': string;
+  'controls__arrow': string;
+  'controlsArrow': string;
+  'controls__arrow--reversed': string;
+  'controlsArrowReversed': string;
+  'value-container': string;
+  'valueContainer': string;
+  'select-container': string;
+  'selectContainer': string;
+  'control': string;
+  'option': string;
+  'dropdown': string;
+  'dropdown__container': string;
+  'dropdownContainer': string;
+  'dropdown__content': string;
+  'dropdownContent': string;
+  'dropdown__checkbox': string;
+  'dropdownCheckbox': string;
+  'dropdown__control': string;
+  'dropdownControl': string;
+  'dropdown__submit': string;
+  'dropdownSubmit': string;
+  'single-value': string;
+  'singleValue': string;
+  'multi-value': string;
+  'multiValue': string;
+  'multi-value__label': string;
+  'multiValueLabel': string;
+  'multi-value__remove': string;
+  'multiValueRemove': string;
+  'placeholder': string;
+  'select--white': string;
+  'selectWhite': string;
+  'select--disabled': string;
+  'selectDisabled': string;
+  'menu-list': string;
+  'menuList': string;
+}
+
+export const locals: IAutocompleteScss;

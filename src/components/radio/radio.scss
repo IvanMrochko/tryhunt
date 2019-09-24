@@ -1,0 +1,39 @@
+@import "variables.scss";
+@import "helpers.scss";
+
+.radio {
+  @include flex($align: center);
+  &--disabled {
+    opacity: 0.5;
+  }
+}
+
+.flag {
+  @include flex(center, center);
+  @include size(25px);
+  position: relative;
+  border: 2px solid $gray;
+  border-radius: 50%;
+  transition: $transition;
+  cursor: pointer;
+  &--active{
+    border: 3px solid $primary;
+  }
+  &__indicator {
+    @include flex(center, center);
+    @include size(13px);
+    display: none;
+    background: $primary;
+    border-radius: 50%;
+
+    &--active {
+      display: flex;
+    }
+  }
+}
+
+.label {
+  margin-left: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+@import "variables.scss";
+@import "helpers.scss";
+
+.file-upload {
+}
+
+.button {
+  @include flex(flex-start, center);
+  display: inline-flex;
+  padding: 6px 15px;
+  font-size: 16px;
+  background: #fff;
+  box-shadow: 0 0 15px 0 rgba(#000, 0.1);
+  border-radius: 4px;
+  &--clickable {
+    cursor: pointer;
+  }
+}
+
+.file-input {
+  display: none;
+}
+
+.upload {
+  @include flex($align: center);
+  &__icon {
+    margin-right: 10px;
+  }
+  &__caption {
+  }
+}
+
+.uploaded {
+	@include flex($align: center)
+}
+
+.clear {
+	margin-right: 10px;
+	cursor: pointer;
+}

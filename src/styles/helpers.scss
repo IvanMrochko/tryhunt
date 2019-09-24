@@ -1,0 +1,39 @@
+@mixin flex($justify: flex-start, $align: flex-start, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin fill($color) {
+  svg,
+  svg *,
+  * {
+    fill: $color !important;
+  }
+}
+
+@mixin ltr() {
+  :global(.direction-ltr) {
+    @content;
+  }
+}
+
+@mixin rtl() {
+  :global(.direction-rtl) {
+    :local {
+      @content;
+    }
+  }
+}
+
+@mixin rtlFont() {
+  :global(.lang-sa) {
+    @content;
+  }
+}

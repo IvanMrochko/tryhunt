@@ -1,0 +1,75 @@
+@import "variables.scss";
+
+@mixin link() {
+  color: $primary;
+  transition: 0.25s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin dropdown(
+  $top,
+  $right,
+  $arrowTop,
+  $arrowRight,
+  $transform: translateX(50%)
+) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  transform: $transform;
+  z-index: 5;
+  display: block;
+  background: #ffffff;
+  box-shadow: 4px 1px 25px rgba(37, 55, 69, 0.15);
+  &:before {
+    content: "";
+    position: absolute;
+    top: $arrowTop;
+    right: $arrowRight;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ffffff;
+  }
+}
+@mixin modal-title() {
+  margin-bottom: 25px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #1a355c;
+}
+@mixin error {
+  &:hover + .error {
+    display: block;
+    visibility: visible;
+    position: absolute;
+    top: -2%;
+    right: 0;
+    padding: 4px 15px;
+    font-size: 14px;
+    color: #ffffff;
+    background: #e16e6e;
+    border-radius: 4px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 7%;
+      width: 0;
+      height: 0;
+      border-top: 6px solid #e16e6e;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+    }
+  }
+
+  @include rtl() {
+    & :hover + .error {
+      right: auto;
+      left: 0%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "core.scss";
+
+.date-select {
+  position: relative;
+}
+
+.header {
+  @include flex($align: center);
+  cursor: pointer;
+}
+
+.selected {
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+.arrow {
+  @include flex(center, center);
+  margin-left: 5px;
+}
+
+.drop-box {
+  @include dropdown(100%, -80%, -5%, 50%);
+  margin-top: 10px;
+  height: fit-content;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.options {
+  background: white;
+  list-style: none;
+}
+.option {
+  padding: 12px;
+  font-size: 14px;
+  color: #6b6b6b;
+  cursor: pointer;
+  &:hover {
+    background: #f5f5f5;
+  }
+}

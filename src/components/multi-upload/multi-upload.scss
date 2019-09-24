@@ -1,0 +1,76 @@
+@import 'helpers.scss';
+@import 'variables.scss';
+
+.multi-upload {
+}
+
+.header {
+  @include flex(space-between, center);
+  padding: 3px 6px 3px 30px;
+  background: #f5f5f5;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: $transition;
+  &:hover {
+    background: rgba(0, 134, 84, 0.08);
+    .header__caption {
+      color: $primary;
+    }
+    .header__upload {
+      background: $primary;
+      @include fill(#ffffff);
+    }
+  }
+  &__dropzone {
+    background: red;
+    &--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  &__caption {
+    color: #6b6b6b;
+    font-size: 14px;
+  }
+  &__input {
+    display: none;
+  }
+  &__upload {
+    padding-left: 10px;
+    padding-right: 10px;
+    @include size(39px);
+    background: #e5e5e5;
+    @include fill(#6b6b6b);
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+.uploads {
+  @include flex(space-between, stretch);
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.upload {
+  @include flex(space-between, center);
+  flex-basis: 49%;
+  margin-top: 10px;
+  padding: 0px 6px 11px 6px;
+  border-bottom: 1px solid #d4d4d7;
+  &__name {
+    flex: 1;
+    margin-left: 15px;
+    font-size: 14px;
+    color: #262626;
+  }
+  &__remove {
+    @include flex(center, center);
+    @include size(39px);
+    padding: 10px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
