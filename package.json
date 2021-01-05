@@ -17,7 +17,7 @@
     "@types/yup": "^0.26.18",
     "autoprefixer": "^9.5.1",
     "awesome-typescript-loader": "^5.2.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "circular-dependency-plugin": "^5.0.2",
     "classnames": "^2.2.6",
     "clean-webpack-plugin": "^2.0.2",
